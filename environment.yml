@@ -1,0 +1,16 @@
+name: credit_decisioning_model
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.13
+  - pandas
+  - numpy
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - jupyter
+  - notebook
+  - pip
+  - pip:
+    - ucimlrepo
