@@ -3,22 +3,22 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-load_uci_data,
-    preprocess_features,
-    split_data
+# load_uci_data,
+#     preprocess_features,
+#     split_data
 
-def download_uci_data(file_path):
+# def download_uci_data(file_path):
 
-    return
+#     return
 
-def load_uci_data(file_path):
-    """Load the UCI German Credit Data from a CSV file."""
-    # Define the column names based on the dataset documentation
-    column_names = [
-        'Status of existing checking account', 'Duration in month', 'Credit history',
-        'Purpose', 'Credit amount', 'Savings account/bonds', 'Present employment since',
-        'Installment rate in percentage of disposable income', 'Personal status and
-    return
+# def load_uci_data(file_path):
+#     """Load the UCI German Credit Data from a CSV file."""
+#     # Define the column names based on the dataset documentation
+#     column_names = [
+#         'Status of existing checking account', 'Duration in month', 'Credit history',
+#         'Purpose', 'Credit amount', 'Savings account/bonds', 'Present employment since',
+#         'Installment rate in percentage of disposable income', 'Personal status and']
+#     return
 
 def univariate_multiplotter(features, numeric_features, categorical_features, name=None):
     """ Plots subplots, histograms or count plots for numeric and categorical columns respectively."""
@@ -26,7 +26,7 @@ def univariate_multiplotter(features, numeric_features, categorical_features, na
     sns.set(style="whitegrid")
 
     # Create a figure with subplots
-    assert len(numeric_features) + len(categorical_cols) <= len(features), "Too many columns to plot. Limit to 20."
+    assert len(numeric_features) + len(categorical_cols) <= len(features.columns), "Too many columns to plot. Limit to 20."
     fig, axes = plt.subplots(nrows=4, ncols=5, figsize=(35, 25))
     # Flatten the axes array for easy iteration
     axes = axes.flatten()
@@ -61,5 +61,5 @@ def univariate_multiplotter(features, numeric_features, categorical_features, na
     fig.suptitle(name, fontsize=40)
     fig.subplots_adjust(top=0.9)  # Adjust the top to make room for the title
     fig.show()
-    
+
     return fig
